@@ -41,6 +41,8 @@ Solving Icon Issues with Expo/vector-icons during Static Site Export in React<br
 
 As we rejoiced over the impressive template of a static site that Expo Router v2 had provided, a predicament quickly emerged: after exporting via metro.config in Expo, we faced a challenge with Expo/vector-icons. As you can see in the image below, the icons were either missing or replaced by rectangles. A disheartening setback indeed.<br/>
 
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr2.1.png">
+
 In my pursuit of a solution, I scoured the internet and stumbled upon pages like this: [https://github.com/expo/expo/issues/21568](https://github.com/expo/expo/issues/21568).<br/><br/>
 
 I spent considerable time experimenting with importing icons using React Native and React, but to no avail. After attempts at building, if successful at all, the outcome remained unchanged: the icons were not displaying in my Expo application.<br/>
@@ -53,39 +55,41 @@ This implies that our users would undoubtedly be disappointed if the potential o
 
 In other words, I decided not to confine myself to Expo/vector-icon icons. Instead, I aimed to create a foundation that would enable users to generate icons from any SVG file in the future. Large or small icons, colored or monochrome – any icons for Expo.<br/>
 
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr4.png">
+
 Let's get to the heart of the matter.<br/>
 
 To address this, we will set up our project to work with SVG images:<br/>
 
 1. Store icons in the assets folder.<br/>
-2. Install the necessary dependencies: npm i react-native-svg.<br/>
-3. Install the second dependency: npm i react-native-svg-transformer and configure them as outlined in this guide: [https://github.com/kristerkari/react-native-svg-transformer#readme](https://github.com/kristerkari/react-native-svg-transformer#readme).<br/>
+2. Install the necessary dependencies:<br/> - `npm i react-native-svg.`<br/>
+3. Install the second dependency:<br/> - `npm i react-native-svg-transformer` <br/>and configure them as outlined in this guide: <br/>[https://github.com/kristerkari/react-native-svg-transformer#readme](https://github.com/kristerkari/react-native-svg-transformer#readme).<br/>
 
 4. Create a file metro.config.js in the root directory with the following content:
 
 javascript
-- [`// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
-- [`const { getDefaultConfig } = require("expo/metro-config");`<br/>
+`// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
+`const { getDefaultConfig } = require("expo/metro-config");`<br/>
 <br/>
-- [`module.exports = (() => `{<br/>
-  - [`const config = getDefaultConfig(__dirname, `{<br/>
-    - [`isCSSEnabled: true,`<br/>
-  - [`});`<br/>
+`module.exports = (() =>`{<br/>
+`const config = getDefaultConfig(__dirname,`{<br/>
+    `isCSSEnabled: true,`<br/>
+`});`<br/>
 <br/>
-  - [`const { transformer, resolver } = config;`<br/>
+`const { transformer, resolver } = config;`<br/>
 <br/>
-  - [`config.transformer = `{<br/>
-    - [`...transformer,`<br/>
-    - [`babelTransformerPath: require.resolve("react-native-svg-transformer"),`<br/>
-  - [`};<br/>
-  - [`config.resolver = `{<br/>
-    - [`...resolver,<`br/>
-    - [`assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),`<br/>
-    - [`sourceExts: [...resolver.sourceExts, "svg"],`<br/>
-  - [`};`<br/>
+`config.transformer =`{<br/>
+    `...transformer,`<br/>
+    `babelTransformerPath: require.resolve("react-native-svg-transformer"),`<br/>
+`}`;<br/>
+`config.resolver =`{<br/>
+    `...resolver,`<br/>
+    `assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),`<br/>
+    `sourceExts: [...resolver.sourceExts, "svg"],`<br/>
+`};`<br/>
 <br/><br/>
- - [` return config;<br/>
-- [`})();`]<br/>
+` return config;`<br/>
+`})();`]<br/>
 <br/>
 
 5. Create a declarations.d.ts file in the root directory with the following content:<br/>
