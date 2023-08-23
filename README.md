@@ -66,8 +66,7 @@ To address this, we will set up our project to work with SVG images:<br/>
 3. Install the second dependency:<br/> - `npm i react-native-svg-transformer` <br/>and configure them as outlined in this guide: <br/>[https://github.com/kristerkari/react-native-svg-transformer#readme](https://github.com/kristerkari/react-native-svg-transformer#readme).<br/>
 
 4. Create a file metro.config.js in the root directory with the following content:
-
-javascript
+<br/<br/>
 `// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
 `const { getDefaultConfig } = require("expo/metro-config");`<br/>
 <br/>
@@ -104,6 +103,8 @@ javascript
 <br/>
 
 6. Open [https://fontawesome.com/](https://fontawesome.com/) and download the required icons to the "icons" folder that we created for this purpose.<br/>
+
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr5.png">
 
 7. Use npm start to launch our project.<br/>
 
