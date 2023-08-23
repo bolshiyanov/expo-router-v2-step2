@@ -64,39 +64,39 @@ To address this, we will set up our project to work with SVG images:<br/>
 4. Create a file metro.config.js in the root directory with the following content:
 
 javascript
-- [`// Learn more https://docs.expo.io/guides/customizing-metro<br/>
-const { getDefaultConfig } = require("expo/metro-config");<br/>
+- [`// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
+- [`const { getDefaultConfig } = require("expo/metro-config");`<br/>
 <br/>
-module.exports = (() => {<br/>
-  const config = getDefaultConfig(__dirname, {<br/>
-    isCSSEnabled: true,<br/>
-  });<br/>
+- [`module.exports = (() => `{<br/>
+  - [`const config = getDefaultConfig(__dirname, `{<br/>
+    - [`isCSSEnabled: true,`<br/>
+  - [`});`<br/>
 <br/>
-  const { transformer, resolver } = config;<br/>
+  - [`const { transformer, resolver } = config;`<br/>
 <br/>
-  config.transformer = {<br/>
-    ...transformer,<br/>
-    babelTransformerPath: require.resolve("react-native-svg-transformer"),<br/>
-  };<br/>
-  config.resolver = {<br/>
-    ...resolver,<br/>
-    assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),<br/>
-    sourceExts: [...resolver.sourceExts, "svg"],<br/>
-  };<br/>
+  - [`config.transformer = `{<br/>
+    - [`...transformer,`<br/>
+    - [`babelTransformerPath: require.resolve("react-native-svg-transformer"),`<br/>
+  - [`};<br/>
+  - [`config.resolver = `{<br/>
+    - [`...resolver,<`br/>
+    - [`assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),`<br/>
+    - [`sourceExts: [...resolver.sourceExts, "svg"],`<br/>
+  - [`};`<br/>
 <br/><br/>
-  return config;<br/>
-})();`]<br/>
+ - [` return config;<br/>
+- [`})();`]<br/>
 <br/>
 
 5. Create a declarations.d.ts file in the root directory with the following content:<br/>
 
 
-- [`declare module "*.svg" {<br/>
-    import React from "react";<br/>
-    import { SvgProps } from "react-native-svg";<br/>
-    const content: React.FC<SvgProps>;<br/>
-    export default content;<br/>
-`]<br/>
+- [`declare module "*.svg" `]{<br/>
+    - [`import React from "react";`]<br/>
+    - [`import { SvgProps } from "react-native-svg";`]<br/>
+    - [`const content: React.FC<SvgProps>;`]<br/>
+    - [`export default content;<br/>`]
+<br/>
 <br/>
 
 6. Open [https://fontawesome.com/](https://fontawesome.com/) and download the required icons to the "icons" folder that we created for this purpose.<br/>
