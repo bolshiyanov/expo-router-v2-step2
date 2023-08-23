@@ -67,26 +67,25 @@ To address this, we will set up our project to work with SVG images:<br/>
 
 4. Create a file metro.config.js in the root directory with the following content:
 <br/<br/>
-`// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
+- `// Learn more https://docs.expo.io/guides/customizing-metro`<br/>
 `const { getDefaultConfig } = require("expo/metro-config");`<br/>
-<br/>
+
 `module.exports = (() =>`{<br/>
 `const config = getDefaultConfig(__dirname,`{<br/>
     `isCSSEnabled: true,`<br/>
 `});`<br/>
-<br/>
+
 `const { transformer, resolver } = config;`<br/>
-<br/>
+
 `config.transformer =`{<br/>
     `...transformer,`<br/>
     `babelTransformerPath: require.resolve("react-native-svg-transformer"),`<br/>
-`}`;<br/>
+`}`
 `config.resolver =`{<br/>
     `...resolver,`<br/>
     `assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),`<br/>
     `sourceExts: [...resolver.sourceExts, "svg"],`<br/>
 `};`<br/>
-<br/><br/>
 `return config;`<br/>
 `})();`<br/>
 <br/>
