@@ -87,18 +87,18 @@ To address this, we will set up our project to work with SVG images:<br/>
     `sourceExts: [...resolver.sourceExts, "svg"],`<br/>
 `};`<br/>
 <br/><br/>
-` return config;`<br/>
-`})();`]<br/>
+`return config;`<br/>
+`})();`<br/>
 <br/>
 
 5. Create a declarations.d.ts file in the root directory with the following content:<br/>
 
 
-- [`declare module "*.svg" `]{<br/>
-    - [`import React from "react";`]<br/>
-    - [`import { SvgProps } from "react-native-svg";`]<br/>
-    - [`const content: React.FC<SvgProps>;`]<br/>
-    - [`export default content;<br/>`]
+- `declare module "*.svg" `{<br/>
+  `import React from "react";`<br/>
+  `import { SvgProps } from "react-native-svg";`<br/>
+  `const content: React.FC<SvgProps>;`<br/>
+  `export default content;<br/>`
 <br/>
 <br/>
 
@@ -106,15 +106,21 @@ To address this, we will set up our project to work with SVG images:<br/>
 
 <img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr5.png">
 
-7. Use npm start to launch our project.<br/>
+7. Use - [`npm start`] to launch our project.<br/>
 
 8. Update imports accordingly.<br/>
 
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr6.png">
+
 9. Revise icon usage. Unlike with expo/vector-icons, with SVG we use "fill" instead of "color." Also, specify dimensions using width and height.<br/>
 
-10. Finally, execute npx expo export -p web and examine the outcome.<br/>
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr7.png">
+
+10. Finally, execute - [`npx expo export -p web and examine the outcome.`]<br/>
 
 We now have icons for Expo that are not limited by style or quantity as in expo/vector-icons. Users can not only select icons from the existing pool but also incorporate custom-made icons that align with the app's style.<br/>
+
+<img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr8.png">
 
 Additionally, I recommend opening the link on your phone and toggling between light and dark themes. Observe how this new template from Expo Router v2 adapts to the device's color scheme.<br/>
 
@@ -122,7 +128,7 @@ Kudos to the developers of this tabs template – our start has been truly impre
 
 Have you encountered any icon issues with Expo? I'll give you a hint: the back arrow is missing in the modal window.<br/>
 
-Download this repository to your computer. Run npm init followed by npm start and try adding your own arrow to the modal window panel.<br/>
+Download this repository to your computer. Run - [`npm init`] followed by - [`npm start`] and try adding your own arrow to the modal window panel.<br/>
 
 In the next segment, we'll delve into exploring other navigators. We'll create an app using the Drawer navigator, face an unsolvable navigation challenge, and most likely revert back to the original version of the app.
 
