@@ -112,7 +112,7 @@ To address this, we will set up our project to work with SVG images:<br/>
 
 <img align="center" alt="expo sdk" height="80%" src="./assets/images/git/Scr7.png">
 
-10. Finally, execute - [`npx expo export -p web and examine the outcome.`]<br/>
+10. Finally, execute - [`npx expo export -p web`] and examine the outcome.<br/>
 
 We now have icons for Expo that are not limited by style or quantity as in expo/vector-icons. Users can not only select icons from the existing pool but also incorporate custom-made icons that align with the app's style.<br/>
 
