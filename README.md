@@ -73,9 +73,7 @@ To address this, we will set up our project to work with SVG images:<br/>
 `     const config = getDefaultConfig(__dirname,`{<br/>
     `     isCSSEnabled: true,`<br/>
 ` });`<br/>
-
 `const { transformer, resolver } = config;`<br/>
-
 `config.transformer =`{<br/>
     `   ...transformer,`<br/>
     `   babelTransformerPath: require.resolve("react-native-svg-transformer"),`<br/>
