@@ -25,9 +25,9 @@ export default function RootLayout() {
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
-    if (error) throw error;
-  }, [error]);
+  // useEffect(() => {
+    // if (error) throw error;
+  // }, [error]);
 
   useEffect(() => {
     if (loaded) {
