@@ -94,7 +94,7 @@ To address this, we will set up our project to work with SVG images:<br/>
   `import React from "react";`<br/>
   `import { SvgProps } from "react-native-svg";`<br/>
   `const content: React.FC<SvgProps>;`<br/>
-  `export default content;<br/>`
+  `export default content;`
 <br/>
 <br/>
 
