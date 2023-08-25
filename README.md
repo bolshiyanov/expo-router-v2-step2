@@ -21,7 +21,7 @@
 - [📚 About this step](#-documentation)
 - [🗺 Stack of this step](#-Stack-of-this-step)
 - [🏅 Why expo-router v2](#-Why-expo-router)
-- [❓ Your task for this step](#-your-task)
+- [❓ Your task for this step](#-your-task-for-this-step)
 - [💙 The Team](#-the-team)
 - [License](#license)
 
@@ -141,7 +141,7 @@ In the next segment, we'll delve into exploring other navigators. We'll create a
 - [`gitHub`](gitHub) GitHub is a web-based platform for version control and collaboration using Git.
 - [`netlify`](netlify) Netlify is a web hosting platform for deploying and managing modern web projects.
 
-##❓ Your task for this stepYour task for this step:
+## ❓ Your task for this step
 
 As you can see, the modal window does not have the ['< Go back'] icon.
 
