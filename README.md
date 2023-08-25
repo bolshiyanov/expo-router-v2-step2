@@ -21,7 +21,7 @@
 - [📚 About this step](#-documentation)
 - [🗺 Stack of this step](#-Stack-of-this-step)
 - [🏅 Why expo-router v2](#-Why-expo-router)
-- [❓ FAQ](#-faq)
+- [❓ Your task for this step](#-your-task)
 - [💙 The Team](#-the-team)
 - [License](#license)
 
@@ -140,6 +140,22 @@ In the next segment, we'll delve into exploring other navigators. We'll create a
 - [`typescript`](typescript) TypeScript is a superset of JavaScript adding static typing for enhanced code quality and tooling.
 - [`gitHub`](gitHub) GitHub is a web-based platform for version control and collaboration using Git.
 - [`netlify`](netlify) Netlify is a web hosting platform for deploying and managing modern web projects.
+
+##❓ Your task for this stepYour task for this step:
+
+As you can see, the modal window does not have the ['< Go back'] icon.
+
+Here's what you need to do:
+1) Create a repository for this step on GitHub, download this repository to your computer.
+2) Build the project ['npm install'];
+3) Download a suitable icon in SVG format to the icons directory.
+4) Locate in the code of the page ['./(tabs)/_layout.tsx'];
+5) Add the icon;
+6) Run ['npm start'];
+7) Check the result;
+8) Run ['npx expo export'];
+9) Remember how to upload the updated project to your GitHub, add hosting integration;
+10) Check the result on your hosting.
 
 ## 🏅 Why expo-router v2
 
