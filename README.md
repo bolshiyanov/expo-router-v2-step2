@@ -155,7 +155,9 @@ Here's what you need to do:
 7) Check the result;
 8) Run ['npx expo export'];
 9) Remember how to upload the updated project to your GitHub, add hosting integration;
-10) Check the result on your hosting.
+10) Check the result on your hosting;
+11) Add a star to My repository.
+
 
 ## 🏅 Why expo-router v2
 
